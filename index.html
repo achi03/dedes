@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SopCss :- Quick Website Styling - The Css Library of Css Libraries</title>
+  <link rel="stylesheet" href="SopCss.css">
+<link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+<body>
+<header>
+<blockquote>
+  <h1>SopCss :- Quick Website Styling - The Css Library of Css Libraries</h1></blockquote>
+</header>
+
+<div class="container">
+  <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+<div id="mypost"></div>
+<script>
+fetch('README.md').then(response => response.text())
+  .then(data => {
+  console.log(data);
+  var converter = new showdown.Converter();
+var md = data;
+var html = converter.makeHtml(md);
+  document.querySelector('#mypost').innerHTML = html;
+});
+</script>
+</div>
+
+<footer class="clay card bounce-bottom txt-deco-none">
+<a href="https://sopproducts.sh20raj.repl.co/"> &copy; SopProducts</a>
+</footer>
+  
+</body>
+</html>
